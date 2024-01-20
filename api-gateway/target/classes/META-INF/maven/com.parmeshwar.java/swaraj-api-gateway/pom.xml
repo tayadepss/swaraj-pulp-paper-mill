@@ -5,11 +5,14 @@
     <artifactId>swaraj-pulp-paper-mill</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>employee-service</artifactId>
-  <name>employee-service</name>
-  <description>employee-service module</description>
-  
+  <artifactId>swaraj-api-gateway</artifactId>
+  <name>swaraj-api-gateway</name>
+  <description>swaraj-api-gateway module</description>
   <dependencies>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-gateway</artifactId>
+    </dependency>
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
@@ -17,17 +20,7 @@
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-config</artifactId>
-    </dependency>   
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-data-jpa</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>com.mysql</groupId>
-      <artifactId>mysql-connector-j</artifactId>
-      <scope>runtime</scope>
-    </dependency>    
+    </dependency>  
     <dependency>
       <groupId>io.micrometer</groupId>
       <artifactId>micrometer-tracing-bridge-brave</artifactId>
@@ -36,8 +29,6 @@
       <groupId>io.zipkin.reporter2</groupId>
       <artifactId>zipkin-reporter-brave</artifactId>
     </dependency>
-    
-     
+        	  
   </dependencies>
-  
 </project>

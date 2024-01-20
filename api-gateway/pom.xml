@@ -5,9 +5,9 @@
     <artifactId>swaraj-pulp-paper-mill</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>api-gateway</artifactId>
-  <name>api-gateway</name>
-  <description>api-gateway module</description>
+  <artifactId>swaraj-api-gateway</artifactId>
+  <name>swaraj-api-gateway</name>
+  <description>swaraj-api-gateway module</description>
   <dependencies>
     <dependency>
       <groupId>org.springframework.cloud</groupId>

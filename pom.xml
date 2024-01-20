@@ -21,11 +21,11 @@
   </properties>
     
   <modules>
-  	<module>employee-service</module>
-  	<module>config-server</module>
-  	<module>discovery-service</module>
-  	<module>api-gateway</module>
-  	<module>department-service</module>
+  	<module>swaraj-employee-service</module>
+  	<module>swaraj-config-server</module>
+  	<module>swaraj-discovery-service</module>
+  	<module>swaraj-api-gateway</module>
+  	<module>swaraj-department-service</module>
   </modules>
   
   <dependencies>

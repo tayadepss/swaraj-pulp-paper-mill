@@ -5,9 +5,9 @@
     <artifactId>swaraj-pulp-paper-mill</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>config-server</artifactId>
-  <name>config-server</name>
-  <description>config-server module</description>
+  <artifactId>swaraj-config-server</artifactId>
+  <name>swaraj-config-server</name>
+  <description>swaraj-config-server module</description>
   
   <dependencies>
     <dependency>

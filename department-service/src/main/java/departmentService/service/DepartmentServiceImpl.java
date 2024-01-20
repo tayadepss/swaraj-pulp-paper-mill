@@ -7,15 +7,17 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import departmentService.client.EmployeeClient;
 import departmentService.dto.DepartmentRequest;
 import departmentService.dto.DepartmentResponse;
 import departmentService.dto.DeptWithEmployeeResponse;
 import departmentService.dto.EmployeeResponse;
-import departmentService.employeeClient.EmployeeClient;
 import departmentService.exceptionClasses.DeptNotExist;
 import departmentService.model.Department;
 import departmentService.repository.DepartmentRepository;
+import lombok.extern.slf4j.Slf4j;
 @Service
+@Slf4j
 public class DepartmentServiceImpl implements DepartmentService {
 	
 	@Autowired
@@ -45,6 +47,7 @@ public class DepartmentServiceImpl implements DepartmentService {
 		Department department=departmentRepository.findByDeptName(dept).orElseThrow(()-> new DeptNotExist(dept));
 		deptWithEmployeeResponse=modelMapper.map(department, DeptWithEmployeeResponse.class);
 		deptWithEmployeeResponse.setEmployees(employeeClient.getAllEmployee());
+		log.info("Department with employee return");
 		return deptWithEmployeeResponse;		
 	}
 	

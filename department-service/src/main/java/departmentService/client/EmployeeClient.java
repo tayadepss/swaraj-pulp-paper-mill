@@ -1,4 +1,4 @@
-package departmentService.employeeClient;
+package departmentService.client;
 
 import java.util.List;
 

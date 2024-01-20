@@ -6,10 +6,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.reactive.function.client.support.WebClientAdapter;
-import org.springframework.web.service.invoker.HttpExchangeAdapter;
 import org.springframework.web.service.invoker.HttpServiceProxyFactory;
 
-import departmentService.employeeClient.EmployeeClient;
+import departmentService.client.EmployeeClient;
 
 @Configuration
 public class WebClientConfig {
@@ -18,7 +17,7 @@ public class WebClientConfig {
 	@Bean
 	WebClient getWebClient() {
 		return WebClient.builder()
-				.baseUrl("http://employee-service")
+				.baseUrl("http://swaraj-employee-service")
 				.filter(filterFunction)
 				.build();
 	}

@@ -5,9 +5,9 @@
     <artifactId>swaraj-pulp-paper-mill</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>discovery-service</artifactId>
-  <name>discovery-service</name>
-  <description>discovery-service module</description>
+  <artifactId>swaraj-discovery-service</artifactId>
+  <name>swaraj-discovery-service</name>
+  <description>swaraj-discovery-service module</description>
   
   <dependencies>
     <dependency>

@@ -13,7 +13,9 @@ import employeeService.dto.EmployeeResponse;
 import employeeService.model.Address;
 import employeeService.model.Employee;
 import employeeService.repository.EmployeeRepository;
+import lombok.extern.slf4j.Slf4j;
 @Service
+@Slf4j
 public class EmployeeServiceImpl implements EmployeeService {
 	
 	@Autowired
@@ -23,6 +25,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Override
 	public List<EmployeeResponse> getAllEmployee() {
 		List<EmployeeResponse> employees=employeeRepository.findAll().stream().map(emp->mapToEmployeeRespnse(emp)).collect(Collectors.toList());
+		log.info("return list of employees");
 		return employees;
 	}
 	private EmployeeResponse mapToEmployeeRespnse(Employee emp) {
@@ -39,6 +42,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 		employee=employeeRepository.save(employee);
 		EmployeeResponse employeeResponse=modelMapper.map(employee, EmployeeResponse.class);
 		 employeeResponse.setAddressResponse(modelMapper.map(employee.getAddress(),AddressResponse.class));
+		 log.info("employee record store in database and return");
 		return employeeResponse;
 	}
 
